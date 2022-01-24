@@ -24,7 +24,9 @@ X
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 ?
 settings.gradle,0\5\05efc8b1657769a27696d478ded1e95f38737233
-<
-build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
 o
 ?app/src/main/java/com/shcollege/bfitadmin/RegisterActivity.java,1\3\1349e0f406ddc480280fe6c345dea7486087de7d
+k
+;app/src/main/java/com/shcollege/bfitadmin/MainActivity.java,f\b\fbda3db6ae4b83d5a3335e786ba791f3e7839e15
+P
+ app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
