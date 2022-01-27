@@ -3,9 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/SHANEL FRANCIN/AndroidStudioProjects/BFitAdmin/app/src/main/res/drawable/background_splashscreen.xml" value="0.10208333333333333" />
+        <entry key="..\:/Users/SHANEL FRANCIN/AndroidStudioProjects/BFitAdmin/app/src/main/res/drawable/bfit_foreground.xml" value="0.33" />
         <entry key="..\:/Users/SHANEL FRANCIN/AndroidStudioProjects/BFitAdmin/app/src/main/res/drawable/gradient_drawable.xml" value="0.2078125" />
+        <entry key="..\:/Users/SHANEL FRANCIN/AndroidStudioProjects/BFitAdmin/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.10208333333333333" />
+        <entry key="..\:/Users/SHANEL FRANCIN/AndroidStudioProjects/BFitAdmin/app/src/main/res/drawable/ripple_.xml" value="0.1675925925925926" />
+        <entry key="..\:/Users/SHANEL FRANCIN/AndroidStudioProjects/BFitAdmin/app/src/main/res/drawable/ripple_logo.xml" value="0.17037037037037037" />
         <entry key="..\:/Users/SHANEL FRANCIN/AndroidStudioProjects/BFitAdmin/app/src/main/res/drawable/round_rect_shape.xml" value="0.2078125" />
-        <entry key="..\:/Users/SHANEL FRANCIN/AndroidStudioProjects/BFitAdmin/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/SHANEL FRANCIN/AndroidStudioProjects/BFitAdmin/app/src/main/res/layout/activity_get_started.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/SHANEL FRANCIN/AndroidStudioProjects/BFitAdmin/app/src/main/res/layout/activity_main.xml" value="0.15" />
         <entry key="..\:/Users/SHANEL FRANCIN/AndroidStudioProjects/BFitAdmin/app/src/main/res/layout/activity_register.xml" value="0.18" />
         <entry key="..\:/Users/SHANEL FRANCIN/AndroidStudioProjects/BFitAdmin/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2078125" />
         <entry key="..\:/Users/SHANEL FRANCIN/AndroidStudioProjects/BFitAdmin/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.10208333333333333" />

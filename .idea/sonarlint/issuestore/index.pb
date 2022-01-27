@@ -17,8 +17,6 @@ A
 gradlew,5\b\5bbfa66edb4db3c7c33c5181f43510990d3307f9
 ;
 gradlew.bat,2\a\2a45a911a8f1836b0b6c5b758962572012d8f8c3
-X
-(gradle/wrapper/gradle-wrapper.properties,f\b\fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
@@ -28,5 +26,5 @@ o
 ?app/src/main/java/com/shcollege/bfitadmin/RegisterActivity.java,1\3\1349e0f406ddc480280fe6c345dea7486087de7d
 k
 ;app/src/main/java/com/shcollege/bfitadmin/MainActivity.java,f\b\fbda3db6ae4b83d5a3335e786ba791f3e7839e15
-P
- app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
+i
+9app/src/main/java/com/shcollege/bfitadmin/GetStarted.java,f\d\fd764a69e87469ef47f369f8048fdf4037c2344e
