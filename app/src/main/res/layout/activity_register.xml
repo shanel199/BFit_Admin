@@ -115,7 +115,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editText_firstName" />
 
     <EditText
-        android:id="@+id/editText_email"
+        android:id="@+id/email_et"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -154,7 +154,7 @@
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_email" />
+        app:layout_constraintTop_toBottomOf="@+id/email_et" />
 
     <TextView
         android:id="@+id/textView_or"

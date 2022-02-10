@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "292054341518",
+    "project_id": "bfit-admin",
+    "storage_bucket": "bfit-admin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:292054341518:android:79c9c8de6581640181f6df",
+        "android_client_info": {
+          "package_name": "com.shcollege.bfitadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "292054341518-plvgfo286rc5tv56r2ifd4pkskeovgre.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1Dis4nvdBECetxsbiBseD7LPSwBjyQwI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "292054341518-plvgfo286rc5tv56r2ifd4pkskeovgre.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
