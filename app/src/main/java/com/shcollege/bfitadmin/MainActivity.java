@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
                             if (user.isEmailVerified()) {
-                               Toast.makeText(MainActivity.this, "Start grinding now!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this, "Start grinding now!", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(MainActivity.this, HomeActivity.class);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 startActivity(intent);

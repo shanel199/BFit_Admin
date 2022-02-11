@@ -46,16 +46,16 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         facebookIcon = (ImageView) findViewById(R.id.imageView_facebook);
         registerbtn.setOnClickListener(this);
     }
-            @Override
-            public void onClick(View v) {
-                switch (v.getId()) {
-                    case R.id.registerbtn:
-                        sign_up();
-                        break;
-                    case R.id.alreadylogin:
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.registerbtn:
+                sign_up();
+                break;
+            case R.id.alreadylogin:
                 startActivity(new Intent(RegisterActivity.this, MainActivity.class));
                 break;
-            }
+        }
     }
 
     private void sign_up() {
@@ -79,16 +79,17 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             emailregister.requestFocus();
             return;
         }
-        if (password.isEmpty()){
-            passwordregister.setError("This field is required");
-            passwordregister.requestFocus();
-            return;
-        }
         if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
             emailregister.setError("Please provide a valid email");
             emailregister.requestFocus();
             return;
         }
+        if (password.isEmpty()){
+            passwordregister.setError("This field is required");
+            passwordregister.requestFocus();
+            return;
+        }
+
         if(password.length() < 6){
             passwordregister.setError("Min password length should be 6 characters");
             passwordregister.requestFocus();
