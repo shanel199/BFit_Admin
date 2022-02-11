@@ -21,8 +21,8 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private EditText emailLogin, passwordLogin,email_et,editText_password;
-    private TextView forgotPassword, login, register,textView_forgotPassword,textView_login,textView_register;
+    private EditText emaillogin, passwordlogin;
+    private TextView forgotpassword, loginbtn, dontregister;
     private ImageView googleIcon, facebookIcon;
     private FirebaseAuth mAuth;
 
@@ -30,80 +30,77 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        register = (TextView) findViewById(R.id.textView_register);
-        register.setOnClickListener(this);
+        dontregister = (TextView) findViewById(R.id.dontregister);
+        dontregister.setOnClickListener(this);
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser currentUser = mAuth.getCurrentUser();
 
 
-        emailLogin = (EditText) findViewById(R.id.email_et);
-        passwordLogin = (EditText) findViewById(R.id.editText_password);
-        forgotPassword = (TextView) findViewById(R.id.textView_forgotPassword);
-        forgotPassword.setPaintFlags(forgotPassword.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
-        login = (TextView) findViewById(R.id.textView_login);
-        register = (TextView) findViewById(R.id.textView_register);
+        emaillogin = (EditText) findViewById(R.id.emaillogin);
+        passwordlogin = (EditText) findViewById(R.id.passwordlogin);
+        forgotpassword = (TextView) findViewById(R.id.forgotpassword);
+        forgotpassword.setPaintFlags(forgotpassword.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+        loginbtn = (TextView) findViewById(R.id.loginbtn);
+        dontregister = (TextView) findViewById(R.id.dontregister);
+        dontregister.setOnClickListener(this);
         googleIcon = (ImageView) findViewById(R.id.imageView_google);
         facebookIcon = (ImageView) findViewById(R.id.imageView_facebook);
-        register.setOnClickListener(this);
-
-        register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,RegisterActivity.class));
-            }
-        });
-
+        loginbtn.setOnClickListener(this);
     }
-
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.textView_register:
+            case R.id.loginbtn:
+                userSignin();
+                break;
+            case R.id.dontregister:
+                startActivity(new Intent(this, RegisterActivity.class));
                 break;
         }
     }
 
     private void userSignin() {
-        String emailLogin = email_et.getText().toString().trim();
-        String passwordLogin = editText_password.getText().toString().trim();
+        String email = emaillogin.getText().toString().trim();
+        String password = passwordlogin.getText().toString().trim();
 
-        if(emailLogin.isEmpty()){
-            email_et.setError("This field is required");
-            email_et.requestFocus();
+        if(email.isEmpty()){
+            emaillogin.setError("This field is required");
+            emaillogin.requestFocus();
             return;
         }
-        if(!Patterns.EMAIL_ADDRESS.matcher(emailLogin).matches()){
-            email_et.setError("Please provide a valid email");
-            email_et.requestFocus();
+        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+            emaillogin.setError("Please provide a valid email");
+            emaillogin.requestFocus();
             return;
         }
-        if(passwordLogin.isEmpty()){
-            editText_password.setError("This field is required");
-            editText_password.requestFocus();
+        if(password.isEmpty()){
+            passwordlogin.setError("This field is required");
+            passwordlogin.requestFocus();
             return;
         }
-        if(passwordLogin.length() < 6){
-            editText_password.setError("Min password length should be 6 characters");
-            editText_password.requestFocus();
+        if(password.length() < 6){
+            passwordlogin.setError("Min password length should be 6 characters");
+            passwordlogin.requestFocus();
             return;
         }
-        mAuth.signInWithEmailAndPassword(emailLogin, passwordLogin)
+        mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                            {
-                                Toast.makeText(MainActivity.this, "User has been registered successfully", Toast.LENGTH_SHORT).show();
+
+                            if (user.isEmailVerified()) {
+                               Toast.makeText(MainActivity.this, "Start grinding now!", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                startActivity(intent);
+                                finish();
                             }
-
-
-
-                    }else {
-                            Toast.makeText(MainActivity.this, "Failed to sign up,Try again!", Toast.LENGTH_SHORT).show();
+                        }else {
+                            Toast.makeText(MainActivity.this, "Failed to sign in! Please check your credentials", Toast.LENGTH_SHORT).show();
+                        }
                     }
-                }
-    });
+                });
+    }
 }
-                    }

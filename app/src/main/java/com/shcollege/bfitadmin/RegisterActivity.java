@@ -22,8 +22,8 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private EditText firstName, lastName, emailRegister, passwordRegister, editText_firstName, editText_lastName, editText_email, editText_password;
-    private TextView login, register, textView_login, textView_register;
+    private EditText fnameregister, lnameregister, emailregister, passwordregister;
+    private TextView alreadylogin, registerbtn;
     private ImageView googleIcon, facebookIcon;
     private FirebaseAuth mAuth;
 
@@ -33,106 +33,111 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         setContentView(R.layout.activity_register);
 
         mAuth = FirebaseAuth.getInstance();
-
-        register = (TextView) findViewById(R.id.textView_register);
-        register.setOnClickListener(this);
-
         FirebaseUser currentUser = mAuth.getCurrentUser();
 
-        firstName = (EditText) findViewById(R.id.editText_firstName);
-        lastName = (EditText) findViewById(R.id.editText_lastName);
-        emailRegister = (EditText) findViewById(R.id.email_et);
-        passwordRegister = (EditText) findViewById(R.id.editText_password);
-        login = (TextView) findViewById(R.id.textView_login);
-        register = (TextView) findViewById(R.id.textView_register);
+        fnameregister = (EditText) findViewById(R.id.fnameregister);
+        lnameregister = (EditText) findViewById(R.id.lnameregister);
+        emailregister = (EditText) findViewById(R.id.emailregister);
+        passwordregister = (EditText) findViewById(R.id.passwordregister);
+        alreadylogin = (TextView) findViewById(R.id.alreadylogin);
+        alreadylogin.setOnClickListener(this);
+        registerbtn = (TextView) findViewById(R.id.registerbtn);
         googleIcon = (ImageView) findViewById(R.id.imageView_google);
         facebookIcon = (ImageView) findViewById(R.id.imageView_facebook);
-        register.setOnClickListener(this);
-        register.setOnClickListener(new View.OnClickListener() {
+        registerbtn.setOnClickListener(this);
+    }
             @Override
             public void onClick(View v) {
                 switch (v.getId()) {
-                    case R.id.textView_register:
-                        register();
+                    case R.id.registerbtn:
+                        sign_up();
                         break;
-                }
+                    case R.id.alreadylogin:
                 startActivity(new Intent(RegisterActivity.this, MainActivity.class));
+                break;
             }
-        });
     }
 
-    private void register() {
-    }
+    private void sign_up() {
+        String firstname = fnameregister.getText().toString().trim();
+        String lastname = lnameregister.getText().toString().trim();
+        String email = emailregister.getText().toString().trim();
+        String password = passwordregister.getText().toString().trim();
 
-    @Override
-    public void onClick(View v) {
-    }
-
-    public void sign_up() {
-
-        String firstName = editText_firstName.getText().toString().trim();
-        String lastName = editText_lastName.getText().toString().trim();
-        String emailRegister = editText_email.getText().toString().trim();
-        String password = editText_password.getText().toString().trim();
-        String id = mAuth.getCurrentUser().getUid();
-        String imageurl = "default";
-
-        if (firstName.isEmpty()) {
-            editText_firstName.setError("This field is required");
-            editText_firstName.requestFocus();
+        if (firstname.isEmpty()){
+            fnameregister.setError("This field is required");
+            fnameregister.requestFocus();
             return;
         }
-        if (lastName.isEmpty()) {
-            editText_lastName.setError("This field is required");
-            editText_lastName.requestFocus();
+        if (lastname.isEmpty()){
+            lnameregister.setError("This field is required");
+            lnameregister.requestFocus();
             return;
         }
-        if (emailRegister.isEmpty()) {
-            editText_email.setError("This field is required");
-            editText_email.requestFocus();
+        if (email.isEmpty()){
+            emailregister.setError("This field is required");
+            emailregister.requestFocus();
             return;
         }
-        if (!Patterns.EMAIL_ADDRESS.matcher(emailRegister).matches()) {
-            editText_email.setError("Please provide a valid email");
-            editText_email.requestFocus();
+        if (password.isEmpty()){
+            passwordregister.setError("This field is required");
+            passwordregister.requestFocus();
             return;
         }
-        if (password.isEmpty()) {
-            editText_password.setError("This field is required");
-            editText_password.requestFocus();
+        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+            emailregister.setError("Please provide a valid email");
+            emailregister.requestFocus();
             return;
         }
-        if (password.length() < 6) {
-            editText_password.setError("Min password length should be 6 characters");
-            editText_password.requestFocus();
+        if(password.length() < 6){
+            passwordregister.setError("Min password length should be 6 characters");
+            passwordregister.requestFocus();
             return;
         }
-        Task<AuthResult> authResultTask = mAuth.createUserWithEmailAndPassword(emailRegister, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-
+        {
+            mAuth.fetchSignInMethodsForEmail(emailregister.getText().toString())
+                    .addOnCompleteListener(new OnCompleteListener<SignInMethodQueryResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<SignInMethodQueryResult> task) {
+                            boolean check = !task.getResult().getSignInMethods().isEmpty();
+                            if(check)
+                            {
+                                Toast.makeText(getApplicationContext(), "Email already exists", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+        }
+        mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()) {
-                    User user = new User(firstName, lastName, emailRegister, password);
+                if (task.isSuccessful()){
+                    User user = new User(firstname, lastname, email, password);
                     FirebaseDatabase.getInstance().getReference("Users")
                             .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                             .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+
+
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
-                                Toast.makeText(RegisterActivity.this, "User has been registered successfully", Toast.LENGTH_SHORT).show();
                                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-                            } else {
-                                Toast.makeText(RegisterActivity.this, "Failed to sign up,Try again!", Toast.LENGTH_SHORT).show();
+                                if (user.isEmailVerified()) {
+                                    startActivity(new Intent(RegisterActivity.this, MainActivity.class));
+                                }
+                                else {
+                                    user.sendEmailVerification();
+                                    Toast.makeText(RegisterActivity.this, "Check your email to verify your account", Toast.LENGTH_SHORT).show();
+                                }
+                                if(!task.isSuccessful())
+                                {
+                                    Toast.makeText(RegisterActivity.this, "Failed to sign up", Toast.LENGTH_SHORT).show();
+                                }
                             }
-
                         }
+
                     });
-                }else {
-                    Toast.makeText(RegisterActivity.this, "Failed to sign up,Try again!", Toast.LENGTH_SHORT).show();
                 }
-                }});
-
-
-                    }
-                }
+            }
+        });
+    }}
