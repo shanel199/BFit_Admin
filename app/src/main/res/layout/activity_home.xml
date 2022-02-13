@@ -52,10 +52,11 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.324"
         app:srcCompat="@drawable/exercises"
-        android:clickable="true"/>
+        android:clickable="true"
+        android:focusable="true" />
 
     <ImageView
-        android:id="@+id/workout_iv"
+        android:id="@+id/equipment_iv"
         android:layout_width="90dp"
         android:layout_height="90dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -90,13 +91,13 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintHorizontal_bias="0.076"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.185" />
+        app:layout_constraintVertical_bias="0.183" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/exercise_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_bold"
@@ -113,7 +114,7 @@
         android:focusable="true" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/equipment_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Equipments"
@@ -172,7 +173,7 @@
         app:layout_constraintVertical_bias="0.692" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/workout_iv"
         android:layout_width="90dp"
         android:layout_height="90dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -185,7 +186,7 @@
         android:clickable="true"/>
 
     <TextView
-        android:id="@+id/Workout_tv"
+        android:id="@+id/workout_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_bold"

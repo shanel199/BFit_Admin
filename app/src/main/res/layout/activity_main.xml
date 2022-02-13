@@ -126,7 +126,8 @@
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordlogin" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordlogin"
+        android:clickable="true"/>
 
     <TextView
         android:id="@+id/textView_or"
