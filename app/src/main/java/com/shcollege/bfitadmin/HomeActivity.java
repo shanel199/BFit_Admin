@@ -23,7 +23,15 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         logoutbtn = (TextView) findViewById(R.id.logoutbtn);
+        equipment_iv =(ImageView) findViewById(R.id.equipment_iv);
         logoutbtn.setOnClickListener(this);
+        equipment_iv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this, add_equipment.class));
+            }
+        });
+
     }
 
     @Override
@@ -32,6 +40,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 case R.id.logoutbtn:
                     logout();
                     break;
+
         }
 
 
@@ -42,4 +51,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             finish();
 
     }
+
+
+
     }
