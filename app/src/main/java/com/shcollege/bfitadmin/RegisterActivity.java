@@ -112,22 +112,22 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
-                    User user = new User(firstname, lastname, email, password);
-                    FirebaseDatabase.getInstance().getReference("Users")
+                    Admin admin = new Admin(firstname, lastname, email, password);
+                    FirebaseDatabase.getInstance().getReference("Admin")
                             .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                            .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            .setValue(admin).addOnCompleteListener(new OnCompleteListener<Void>() {
 
 
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
-                                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                                FirebaseUser Admin = FirebaseAuth.getInstance().getCurrentUser();
 
-                                if (user.isEmailVerified()) {
+                                if (Admin.isEmailVerified()) {
                                     startActivity(new Intent(RegisterActivity.this, MainActivity.class));
                                 }
                                 else {
-                                    user.sendEmailVerification();
+                                    Admin.sendEmailVerification();
                                     Toast.makeText(RegisterActivity.this, "Check your email to verify your account", Toast.LENGTH_SHORT).show();
                                 }
                                 if(!task.isSuccessful())

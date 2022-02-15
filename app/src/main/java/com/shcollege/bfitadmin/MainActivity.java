@@ -88,9 +88,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                            FirebaseUser Admin = FirebaseAuth.getInstance().getCurrentUser();
 
-                            if (user.isEmailVerified()) {
+                            if (Admin.isEmailVerified()) {
                                 Toast.makeText(MainActivity.this, "Start grinding now!", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(MainActivity.this, HomeActivity.class);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);

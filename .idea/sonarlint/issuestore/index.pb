@@ -9,8 +9,6 @@ c
 app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
 <
 build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
-k
-;app/src/main/java/com/shcollege/bfitadmin/MainActivity.java,f\b\fbda3db6ae4b83d5a3335e786ba791f3e7839e15
 l
 <app/src/main/java/com/shcollege/bfitadmin/add_equipment.java,6\7\6713ec9f5bb5c0594911fe82078971b085fde778
 P

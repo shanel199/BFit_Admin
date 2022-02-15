@@ -1,11 +1,11 @@
 package com.shcollege.bfitadmin;
 
-public class User {
+public class Admin {
     public String firstname,lastname,email,password;
-    public User(){
+    public Admin(){
 
     }
-    public User(String firstname,String lastname,String email,String password){
+    public Admin(String firstname, String lastname, String email, String password){
         this.firstname = firstname;
         this.lastname = lastname;
         this.email = email;
