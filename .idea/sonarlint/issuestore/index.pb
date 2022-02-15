@@ -1,6 +1,4 @@
 
-k
-;app/src/main/java/com/shcollege/bfitadmin/SplashScreen.java,9\c\9ce8c71d808c8b75e1f5c356e9e288778e8370ce
 H
 app/google-services.json,f\d\fd8d34b142d02ec743a8efefefd2c097961666e9
 i
