@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BFitAdmin">
         <activity
+            android:name=".exercises"
+            android:exported="false" />
+        <activity
+            android:name=".diet"
+            android:exported="false" />
+        <activity
             android:name=".add_equipment"
             android:exported="false" />
         <activity

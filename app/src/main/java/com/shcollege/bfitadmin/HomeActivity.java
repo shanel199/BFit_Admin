@@ -14,7 +14,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
 
 
-    private TextView logoutbtn;
+    private TextView logoutbtn,diet_banner,add_diet;
     private ImageView exercise_iv,equipment_iv,diet_iv,bodypart_iv,workout_iv;
 
 
@@ -25,6 +25,21 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         logoutbtn = (TextView) findViewById(R.id.logoutbtn);
         equipment_iv =(ImageView) findViewById(R.id.equipment_iv);
         logoutbtn.setOnClickListener(this);
+        diet_iv =(ImageView) findViewById(R.id.diet_iv);
+        //diet_banner =(TextView) findViewById(R.id.diet_banner);
+        exercise_iv =(ImageView) findViewById(R.id.exercise_iv);
+        exercise_iv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this, exercises.class));
+            }
+        });
+        diet_iv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this, diet.class));
+            }
+        });
         equipment_iv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

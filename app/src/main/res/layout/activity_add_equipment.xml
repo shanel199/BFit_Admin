@@ -20,7 +20,9 @@
         app:layout_constraintHorizontal_bias="0.057"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.037" />
+        app:layout_constraintVertical_bias="0.037"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"/>
 
     <TextView
         android:id="@+id/add_equip"
@@ -35,7 +37,9 @@
         app:layout_constraintHorizontal_bias="0.93"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.037" />
+        app:layout_constraintVertical_bias="0.037"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"/>
 
     <TextView
         android:id="@+id/edit_K_tv"
