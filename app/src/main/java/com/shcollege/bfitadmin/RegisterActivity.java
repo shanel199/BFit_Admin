@@ -89,6 +89,11 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             passwordregister.requestFocus();
             return;
         }
+        if (password.isEmpty()){
+            passwordregister.setError("This field is required");
+            passwordregister.requestFocus();
+            return;
+        }
 
         if(password.length() < 6){
             passwordregister.setError("Min password length should be 6 characters");
