@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".add_exercise">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/edit_diet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="20dp"
+                android:clickable="true"
+                android:fontFamily="@font/poppins_bold"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:text="Edit Body Parts"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/add_equip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="340dp"
+                android:layout_marginTop="20dp"
+                android:clickable="true"
+                android:fontFamily="@font/poppins_bold"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:text="Add"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="20dp"
+                app:srcCompat="@drawable/triceps" />
+
+            <TextView
+                android:id="@+id/forearm_tv"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="30dp"
+                android:text="Forearms"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="30dp"
+                app:srcCompat="@drawable/shoulders" />
+            <TextView
+                android:id="@+id/Shoulder_tv"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="30dp"
+                android:text="Shoulders"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="30dp"
+                app:srcCompat="@drawable/chest" />
+            <TextView
+                android:id="@+id/chest_tv"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="30dp"
+                android:text="Chest"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="30dp"
+                app:srcCompat="@drawable/abdominals" />
+            <TextView
+                android:id="@+id/abs_tv"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="30dp"
+                android:text="Abs"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="30dp"
+                app:srcCompat="@drawable/lats" />
+            <TextView
+                android:id="@+id/lats_tv"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="30dp"
+                android:text="Lats"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="30dp"
+                app:srcCompat="@drawable/traps" />
+            <TextView
+                android:id="@+id/traps_tv"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="30dp"
+                android:text="Traps"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="30dp"
+                app:srcCompat="@drawable/hamstring" />
+
+            <TextView
+                android:id="@+id/glutes_tv"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="30dp"
+                android:text="Glutes"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="30dp"
+                app:srcCompat="@drawable/neck" />
+            <TextView
+                android:id="@+id/neck_tv"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="30dp"
+                android:text="Neck"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="30dp"
+                app:srcCompat="@drawable/quadriceps" />
+            <TextView
+                android:id="@+id/quads_tv"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="30dp"
+                android:text="Quads"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+
+
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

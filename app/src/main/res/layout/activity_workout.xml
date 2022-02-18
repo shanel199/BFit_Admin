@@ -8,26 +8,100 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/exercise_Add_banner"
+                android:id="@+id/edit_workout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_bold"
-                android:text="Edit Workouts"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:layout_marginTop="20dp"
                 android:layout_marginStart="13dp"
+                android:layout_marginTop="20dp"
                 android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground"/>
+                android:fontFamily="@font/poppins_bold"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:text="Edit Workout"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
+            <ImageView
+                android:id="@+id/workout1_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="225dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp"
+                app:srcCompat="@drawable/workout1" />
+
+            <TextView
+                android:id="@+id/workout1_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="30dp"
+                android:text="The Athlete's Workout"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/workout2_iv"
+                android:layout_width="375dp"
+                android:layout_height="267dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp"
+                app:srcCompat="@drawable/workout2" />
+            <TextView
+                android:id="@+id/workout2_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="30dp"
+                android:text="The 3D Shoulders"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+            <ImageView
+                android:id="@+id/workout3_iv"
+                android:layout_width="375dp"
+                android:layout_height="267dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp"
+                app:srcCompat="@drawable/abs" />
+            <TextView
+                android:id="@+id/abs_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="30dp"
+                android:text="Extreme Six pack Abs"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/workout4_iv"
+                android:layout_width="375dp"
+                android:layout_height="267dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp"
+                app:srcCompat="@drawable/workout3" />
+
+            <TextView
+                android:id="@+id/transform_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="30dp"
+                android:text="The Body Transformation"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
 
 
         </LinearLayout>

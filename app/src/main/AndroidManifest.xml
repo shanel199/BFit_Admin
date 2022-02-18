@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BFitAdmin">
         <activity
+            android:name=".body_part"
+            android:exported="false" />
+        <activity
             android:name=".workout"
             android:exported="false" />
         <activity
