@@ -27,8 +27,16 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         logoutbtn.setOnClickListener(this);
         diet_iv =(ImageView) findViewById(R.id.diet_iv);
         //diet_banner =(TextView) findViewById(R.id.diet_banner);
+        workout_iv =(ImageView) findViewById(R.id.workout_iv);
+        workout_iv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this, workout.class));
+            }
+        });
         exercise_iv =(ImageView) findViewById(R.id.exercise_iv);
-        exercise_iv.setOnClickListener(new View.OnClickListener() {
+        exercise_iv.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(HomeActivity.this, exercises.class));

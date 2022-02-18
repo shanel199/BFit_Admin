@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Paint;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
@@ -29,23 +30,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        dontregister = (TextView) findViewById(R.id.dontregister);
-        dontregister.setOnClickListener(this);
-        mAuth = FirebaseAuth.getInstance();
-        FirebaseUser currentUser = mAuth.getCurrentUser();
+
+        try {
+            setContentView(R.layout.activity_main);
+
+            dontregister = (TextView) findViewById(R.id.dontregister);
+            dontregister.setOnClickListener(this);
+            mAuth = FirebaseAuth.getInstance();
+
+            FirebaseUser currentUser = mAuth.getCurrentUser();
 
 
-        emaillogin = (EditText) findViewById(R.id.emaillogin);
-        passwordlogin = (EditText) findViewById(R.id.passwordlogin);
-        forgotpassword = (TextView) findViewById(R.id.forgotpassword);
-        forgotpassword.setPaintFlags(forgotpassword.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
-        loginbtn = (TextView) findViewById(R.id.loginbtn);
-        dontregister = (TextView) findViewById(R.id.dontregister);
-        dontregister.setOnClickListener(this);
-        googleIcon = (ImageView) findViewById(R.id.imageView_google);
-        facebookIcon = (ImageView) findViewById(R.id.imageView_facebook);
-        loginbtn.setOnClickListener(this);
+            emaillogin = (EditText) findViewById(R.id.emaillogin);
+            passwordlogin = (EditText) findViewById(R.id.passwordlogin);
+            forgotpassword = (TextView) findViewById(R.id.forgotpassword);
+            forgotpassword.setPaintFlags(forgotpassword.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+            loginbtn = (TextView) findViewById(R.id.loginbtn);
+            dontregister = (TextView) findViewById(R.id.dontregister);
+            dontregister.setOnClickListener(this);
+            googleIcon = (ImageView) findViewById(R.id.imageView_google);
+            facebookIcon = (ImageView) findViewById(R.id.imageView_facebook);
+            loginbtn.setOnClickListener(this);
+        } catch (Exception e) {
+            Log.e("333", "onCreate: Error ONcREATE", e);
+        }
     }
     @Override
     public void onClick(View v) {

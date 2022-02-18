@@ -37,7 +37,27 @@
         android:text="Title"
         android:textStyle="bold"/>
 
-    <EditText
+            <EditText
+                android:id="@+id/title_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp"
+                android:ems="10"
+                android:hint="Name"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/steps_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="30dp"
+                android:text="Steps"
+                android:textStyle="bold" />
+
+            <EditText
         android:id="@+id/steps_et"
         android:singleLine="true"
         android:layout_width="match_parent"
@@ -49,27 +69,7 @@
         android:ems="10"
         android:hint="Steps"/>
 
-    <TextView
-        android:id="@+id/steps_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="30dp"
-        android:text="Steps"
-        android:textStyle="bold"/>
-
-    <EditText
-        android:id="@+id/title_et"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Name"
-        android:layout_marginTop="30dp"
-        android:inputType="textPersonName"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"/>
-
-    <TextView
+            <TextView
         android:id="@+id/sets_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -90,10 +90,7 @@
         android:inputType="textMultiLine"
         android:maxLines="5"
         android:singleLine="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/exercise_Add_banner"
-        app:layout_constraintVertical_bias="0.388"
+
         />
 
     <TextView
@@ -104,12 +101,7 @@
         android:layout_marginTop="30dp"
         android:text="Reps"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/exercise_Add_banner"
-        app:layout_constraintHorizontal_bias="0.028"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_et"
-        app:layout_constraintVertical_bias="0.402" />
+         />
 
     <EditText
         android:id="@+id/reps_et"
@@ -117,6 +109,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:layout_marginTop="40dp"
+        android:layout_marginEnd="10dp"
         android:ems="10"
         android:hint="Reps"
         android:inputType="textMultiLine"
@@ -141,6 +134,49 @@
         android:layout_height="wrap_content"
         android:entries="@array/musclespinner"
         android:spinnerMode="dialog" />
+
+            <TextView
+                android:id="@+id/difficulty_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="30dp"
+                android:text="Difficulty Level"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp"
+                android:entries="@array/difficulty"
+                android:spinnerMode="dialog" />
+
+            <TextView
+                android:id="@+id/Time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="30dp"
+                android:text="Time"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/time_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp"
+                android:ems="10"
+                android:hint="Time"
+                android:inputType="textMultiLine"
+                android:maxLines="5"
+                android:singleLine="true"
+                />
+
 
         </LinearLayout>
 

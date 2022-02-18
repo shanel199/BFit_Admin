@@ -14,4 +14,10 @@
         <item>Forearm</item>
         <item>Biceps</item>
     </array>
+
+    <array name="difficulty">
+        <item>Beginner</item>
+        <item>Intermediate</item>
+        <item>Advanced</item>
+    </array>
 </resources>

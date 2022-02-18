@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BFitAdmin">
         <activity
+            android:name=".workout"
+            android:exported="false" />
+        <activity
             android:name=".add_exercise"
             android:exported="false" />
         <activity
@@ -25,10 +28,10 @@
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".GetStarted"
+            android:name=".RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".add_diet"
             android:exported="false" />
         <activity
             android:name=".SplashScreen"
