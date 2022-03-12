@@ -25,9 +25,6 @@
             android:name=".diet"
             android:exported="false" />
         <activity
-            android:name=".add_equipment"
-            android:exported="false" />
-        <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity

@@ -24,25 +24,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
+        app:layout_constraintVertical_bias="0.959" />
 
     <TextView
         android:id="@+id/tv_admin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:clickable="true"
         android:fontFamily="@font/poppins_bold"
+        android:foreground="?android:attr/selectableItemBackground"
         android:text="BFit Admin"
         android:textColor="#1D1617"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintHorizontal_bias="0.447"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023"
-        android:foreground="?android:attr/selectableItemBackground"
-        android:clickable="true"
-        />
+        app:layout_constraintVertical_bias="0.023" />
 
     <ImageView
         android:id="@+id/exercise_iv"
@@ -59,19 +58,7 @@
         android:foreground="?android:attr/selectableItemBackground"
         />
 
-    <ImageView
-        android:id="@+id/equipment_iv"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.324"
-        app:srcCompat="@drawable/equipment"
-        android:clickable="true"
-        android:foreground="?android:attr/selectableItemBackground"/>
+
 
     <ImageView
         android:id="@+id/diet_iv"
@@ -120,24 +107,6 @@
         android:foreground="?android:attr/selectableItemBackground" />
 
     <TextView
-        android:id="@+id/equipment_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Equipments"
-        android:fontFamily="@font/poppins_bold"
-        android:textColor="#1D1617"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.449"
-        android:clickable="true"
-        android:foreground="?android:attr/selectableItemBackground"
-        />
-
-    <TextView
         android:id="@+id/diet_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -155,68 +124,36 @@
         android:foreground="?android:attr/selectableItemBackground"
         />
 
-    <ImageView
-        android:id="@+id/bodypart_iv"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.592"
-        app:srcCompat="@drawable/body_part"
-        android:clickable="true"
-        android:foreground="?android:attr/selectableItemBackground"/>
-
-    <TextView
-        android:id="@+id/bodypart_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_bold"
-        android:text="Body Parts"
-        android:textColor="#1D1617"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.064"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.692"
-        android:foreground="?android:attr/selectableItemBackground"
-        android:clickable="true"/>
 
     <ImageView
         android:id="@+id/workout_iv"
         android:layout_width="90dp"
         android:layout_height="90dp"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.592"
-        app:srcCompat="@drawable/workout"
-        android:clickable="true"
-        android:foreground="?android:attr/selectableItemBackground"/>
+        app:layout_constraintVertical_bias="0.324"
+        app:srcCompat="@drawable/workout" />
 
     <TextView
         android:id="@+id/workout_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:clickable="true"
         android:fontFamily="@font/poppins_bold"
+        android:foreground="?android:attr/selectableItemBackground"
         android:text="Workouts"
         android:textColor="#1D1617"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.692"
-        android:foreground="?android:attr/selectableItemBackground"
-        android:clickable="true"
-        />
+        app:layout_constraintVertical_bias="0.449" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
