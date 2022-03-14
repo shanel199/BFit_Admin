@@ -1,23 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <array name="musclespinner">
-        <item>Glutes</item>
-        <item>Chest</item>
-        <item>Abs</item>
-        <item>Triceps</item>
-        <item>Shoulders</item>
-        <item>Quads</item>
-        <item>Neck</item>
-        <item>Traps</item>
-        <item>Lats</item>
-        <item>Hamstrings</item>
-        <item>Forearm</item>
-        <item>Biceps</item>
-    </array>
+
 
     <array name="difficulty">
-        <item>Beginner</item>
-        <item>Intermediate</item>
-        <item>Advanced</item>
+        <item>Improve Shape</item>
+        <item>Lean and Tone</item>
+        <item>Lose a Fat</item>
     </array>
 </resources>

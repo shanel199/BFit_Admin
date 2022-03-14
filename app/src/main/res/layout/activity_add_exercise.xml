@@ -116,24 +116,9 @@
         android:maxLines="5"
         android:singleLine="true" />
 
-    <TextView
-        android:id="@+id/Muscles_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="30dp"
-        android:text="Muscles Involved"
-        android:textStyle="bold" />
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="match_parent"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_height="wrap_content"
-        android:entries="@array/musclespinner"
-        android:spinnerMode="dialog" />
+
+
 
             <TextView
                 android:id="@+id/difficulty_tv"
@@ -141,7 +126,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="13dp"
                 android:layout_marginTop="30dp"
-                android:text="Difficulty Level"
+                android:text="GOAL"
                 android:textStyle="bold" />
 
             <Spinner

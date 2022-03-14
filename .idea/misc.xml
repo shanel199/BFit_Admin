@@ -3,6 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/BCI LAB/StudioProjects/BFit_Admin/app/src/main/res/drawable/exercises.xml" value="0.2" />
+        <entry key="..\:/Users/BCI LAB/StudioProjects/BFit_Admin/app/src/main/res/layout/activity_add_diet.xml" value="0.35260416666666666" />
+        <entry key="..\:/Users/BCI LAB/StudioProjects/BFit_Admin/app/src/main/res/layout/activity_add_exercise.xml" value="0.35260416666666666" />
+        <entry key="..\:/Users/BCI LAB/StudioProjects/BFit_Admin/app/src/main/res/layout/activity_diet.xml" value="0.35260416666666666" />
+        <entry key="..\:/Users/BCI LAB/StudioProjects/BFit_Admin/app/src/main/res/layout/activity_exercises.xml" value="0.35260416666666666" />
+        <entry key="..\:/Users/BCI LAB/StudioProjects/BFit_Admin/app/src/main/res/layout/activity_home.xml" value="0.25" />
+        <entry key="..\:/Users/BCI LAB/StudioProjects/BFit_Admin/app/src/main/res/layout/activity_workout.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/Prince/AndroidStudioProjects/BFit_Admin/app/src/main/res/layout/activity_add_diet.xml" value="0.1" />
         <entry key="..\:/Users/Prince/AndroidStudioProjects/BFit_Admin/app/src/main/res/layout/activity_diet.xml" value="0.1" />
         <entry key="..\:/Users/Prince/AndroidStudioProjects/BFit_Admin/app/src/main/res/layout/activity_get_started.xml" value="0.2269021739130435" />
