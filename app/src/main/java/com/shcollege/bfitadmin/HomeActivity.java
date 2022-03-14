@@ -15,7 +15,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
 
     private TextView logoutbtn,diet_banner,add_diet;
-    private ImageView exercise_iv,equipment_iv,diet_iv,bodypart_iv,workout_iv;
+    private ImageView exercise_iv,profile_iv,diet_iv,workout_iv;
 
 
     @Override
@@ -27,6 +27,13 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         diet_iv =(ImageView) findViewById(R.id.diet_iv);
         //diet_banner =(TextView) findViewById(R.id.diet_banner);
         workout_iv =(ImageView) findViewById(R.id.workout_iv);
+        profile_iv =(ImageView) findViewById(R.id.profile_iv);
+        profile_iv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this, profile.class));
+            }
+        });
         workout_iv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

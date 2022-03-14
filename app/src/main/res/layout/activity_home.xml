@@ -157,7 +157,7 @@
         app:layout_constraintVertical_bias="0.444" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/profile_iv"
         android:layout_width="85dp"
         android:layout_height="85dp"
         android:layout_marginTop="30dp"
@@ -166,7 +166,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/workout_tv"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/profile" />
+        app:srcCompat="@drawable/profile"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"/>
 
     <TextView
         android:id="@+id/profile_tv"
@@ -180,9 +182,9 @@
         android:layout_marginTop="20dp"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/profile_iv"
+        app:layout_constraintStart_toStartOf="@+id/profile_iv"
+        app:layout_constraintTop_toBottomOf="@+id/profile_iv"
         app:layout_constraintVertical_bias="0.0" />
 
 
