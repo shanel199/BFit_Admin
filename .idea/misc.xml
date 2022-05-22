@@ -3,6 +3,71 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Abhiram/AndroidStudioProjects/BFit_Admin/app/src/main/res/layout/activity_add_diet.xml" value="0.25" />
+        <entry key="..\:/Users/Abhiram/AndroidStudioProjects/BFit_Admin/app/src/main/res/layout/activity_add_workout.xml" value="0.25" />
+        <entry key="..\:/Users/Abhiram/AndroidStudioProjects/BFit_Admin/app/src/main/res/layout/activity_delete_diet.xml" value="0.151268115942029" />
+        <entry key="..\:/Users/Abhiram/AndroidStudioProjects/BFit_Admin/app/src/main/res/layout/activity_diet_home.xml" value="0.151268115942029" />
+        <entry key="..\:/Users/Abhiram/AndroidStudioProjects/BFit_Admin/app/src/main/res/layout/activity_home.xml" value="0.33" />
+        <entry key="..\:/Users/Abhiram/AndroidStudioProjects/BFit_Admin/app/src/main/res/layout/activity_workout_details.xml" value="0.16" />
+        <entry key="..\:/Users/Abhiram/AndroidStudioProjects/BFit_Admin/app/src/main/res/layout/activity_workout_home.xml" value="0.18" />
+        <entry key="..\:/Users/Abhiram/AndroidStudioProjects/BFit_Admin/app/src/main/res/layout/cardview_workouts.xml" value="0.151268115942029" />
+        <entry key="..\:/Users/Abhiram/AndroidStudioProjects/BFit_Admin/app/src/main/res/layout/cardview_workouts2.xml" value="0.151268115942029" />
+        <entry key="..\:/Users/Abhiram/AndroidStudioProjects/BFit_Admin/app/src/main/res/layout/custom_list_diet.xml" value="0.151268115942029" />
+        <entry key="..\:/Users/Abhiram/AndroidStudioProjects/BFit_Admin/app/src/main/res/layout/fragment_description.xml" value="0.33" />
+        <entry key="..\:/Users/Abhiram/AndroidStudioProjects/BFit_Admin/app/src/main/res/layout/fragment_description2.xml" value="0.25" />
+        <entry key="..\:/Users/Abhiram/AndroidStudioProjects/BFit_Admin/app/src/main/res/layout/fragment_video.xml" value="0.12590579710144928" />
+        <entry key="..\:/Users/Agnesh/Desktop/BFit_Admin/app/src/main/res/drawable/app_icon_admin_splash.xml" value="0.139" />
+        <entry key="..\:/Users/Agnesh/Desktop/BFit_Admin/app/src/main/res/drawable/bfit_foreground.xml" value="0.1925" />
+        <entry key="..\:/Users/Agnesh/Desktop/BFit_Admin/app/src/main/res/drawable/cardview_bg.xml" value="0.1925" />
+        <entry key="..\:/Users/Agnesh/Desktop/BFit_Admin/app/src/main/res/drawable/ic_baseline_image_not_supported_24.xml" value="0.1745" />
+        <entry key="..\:/Users/Agnesh/Desktop/BFit_Admin/app/src/main/res/drawable/wokout_category_bg.xml" value="0.1925" />
+        <entry key="..\:/Users/Agnesh/Desktop/BFit_Admin/app/src/main/res/layout/activity_add_diet.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/Agnesh/Desktop/BFit_Admin/app/src/main/res/layout/activity_add_diet2.xml" value="0.25" />
+        <entry key="..\:/Users/Agnesh/Desktop/BFit_Admin/app/src/main/res/layout/activity_add_exercise.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/Agnesh/Desktop/BFit_Admin/app/src/main/res/layout/activity_add_workout.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/Agnesh/Desktop/BFit_Admin/app/src/main/res/layout/activity_add_workout2.xml" value="0.2" />
+        <entry key="..\:/Users/Agnesh/Desktop/BFit_Admin/app/src/main/res/layout/activity_diet.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/Agnesh/Desktop/BFit_Admin/app/src/main/res/layout/activity_diet_details.xml" value="0.1" />
+        <entry key="..\:/Users/Agnesh/Desktop/BFit_Admin/app/src/main/res/layout/activity_diet_home.xml" value="0.25" />
+        <entry key="..\:/Users/Agnesh/Desktop/BFit_Admin/app/src/main/res/layout/activity_exercises.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/Agnesh/Desktop/BFit_Admin/app/src/main/res/layout/activity_home.xml" value="0.25" />
+        <entry key="..\:/Users/Agnesh/Desktop/BFit_Admin/app/src/main/res/layout/activity_login.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Agnesh/Desktop/BFit_Admin/app/src/main/res/layout/activity_main.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/Agnesh/Desktop/BFit_Admin/app/src/main/res/layout/activity_profile.xml" value="0.25" />
+        <entry key="..\:/Users/Agnesh/Desktop/BFit_Admin/app/src/main/res/layout/activity_register.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/Agnesh/Desktop/BFit_Admin/app/src/main/res/layout/activity_view_meal.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/Agnesh/Desktop/BFit_Admin/app/src/main/res/layout/activity_view_workout.xml" value="0.33" />
+        <entry key="..\:/Users/Agnesh/Desktop/BFit_Admin/app/src/main/res/layout/activity_workout.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/Agnesh/Desktop/BFit_Admin/app/src/main/res/layout/activity_workout_details.xml" value="0.25" />
+        <entry key="..\:/Users/Agnesh/Desktop/BFit_Admin/app/src/main/res/layout/activity_workout_home.xml" value="0.21965579710144928" />
+        <entry key="..\:/Users/Agnesh/Desktop/BFit_Admin/app/src/main/res/layout/cardview_workouts.xml" value="0.1" />
+        <entry key="..\:/Users/Agnesh/Desktop/BFit_Admin/app/src/main/res/layout/custom_list.xml" value="0.25" />
+        <entry key="..\:/Users/Agnesh/Desktop/BFit_Admin/app/src/main/res/layout/custom_list_diet.xml" value="0.1585144927536232" />
+        <entry key="..\:/Users/Agnesh/Desktop/BFit_Admin/app/src/main/res/layout/custom_list_workout.xml" value="0.33" />
+        <entry key="..\:/Users/Agnesh/Desktop/BFit_Admin/app/src/main/res/layout/fragment_description.xml" value="0.25" />
+        <entry key="..\:/Users/Agnesh/Desktop/BFit_Admin/app/src/main/res/layout/fragment_description2.xml" value="0.19293478260869565" />
+        <entry key="..\:/Users/Agnesh/Desktop/BFit_Admin/app/src/main/res/layout/fragment_video.xml" value="0.2" />
+        <entry key="..\:/Users/Agnesh/Desktop/BFit_Admin/app/src/main/res/layout/fragment_video2.xml" value="0.25" />
+        <entry key="..\:/Users/Agnesh/Desktop/WORK/BFit_Admin/app/src/main/res/layout/activity_add_diet.xml" value="0.25" />
+        <entry key="..\:/Users/Agnesh/Desktop/WORK/BFit_Admin/app/src/main/res/layout/activity_add_workout.xml" value="0.25" />
+        <entry key="..\:/Users/Agnesh/Desktop/WORK/BFit_Admin/app/src/main/res/layout/activity_delete_diet.xml" value="0.182518115942029" />
+        <entry key="..\:/Users/Agnesh/Desktop/WORK/BFit_Admin/app/src/main/res/layout/activity_delete_workout.xml" value="0.182518115942029" />
+        <entry key="..\:/Users/Agnesh/Desktop/WORK/BFit_Admin/app/src/main/res/layout/activity_diet_details.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/Agnesh/Desktop/WORK/BFit_Admin/app/src/main/res/layout/activity_diet_home.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/Agnesh/Desktop/WORK/BFit_Admin/app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="..\:/Users/Agnesh/Desktop/WORK/BFit_Admin/app/src/main/res/layout/activity_profile.xml" value="0.182518115942029" />
+        <entry key="..\:/Users/Agnesh/Desktop/WORK/BFit_Admin/app/src/main/res/layout/activity_register.xml" value="0.182518115942029" />
+        <entry key="..\:/Users/Agnesh/Desktop/WORK/BFit_Admin/app/src/main/res/layout/activity_reset_password.xml" value="0.25" />
+        <entry key="..\:/Users/Agnesh/Desktop/WORK/BFit_Admin/app/src/main/res/layout/activity_view_meal.xml" value="0.25" />
+        <entry key="..\:/Users/Agnesh/Desktop/WORK/BFit_Admin/app/src/main/res/layout/activity_view_workout.xml" value="0.25" />
+        <entry key="..\:/Users/Agnesh/Desktop/WORK/BFit_Admin/app/src/main/res/layout/activity_workout_details.xml" value="0.25" />
+        <entry key="..\:/Users/Agnesh/Desktop/WORK/BFit_Admin/app/src/main/res/layout/activity_workout_home.xml" value="0.182518115942029" />
+        <entry key="..\:/Users/Agnesh/Desktop/WORK/BFit_Admin/app/src/main/res/layout/cardview_workouts.xml" value="0.19293478260869565" />
+        <entry key="..\:/Users/Agnesh/Desktop/WORK/BFit_Admin/app/src/main/res/layout/cardview_workouts2.xml" value="0.25" />
+        <entry key="..\:/Users/Agnesh/Desktop/WORK/BFit_Admin/app/src/main/res/layout/custom_list_diet.xml" value="0.19293478260869565" />
+        <entry key="..\:/Users/Agnesh/Desktop/WORK/BFit_Admin/app/src/main/res/layout/custom_list_workout.xml" value="0.19293478260869565" />
+        <entry key="..\:/Users/Agnesh/Desktop/WORK/BFit_Admin/app/src/main/res/layout/fragment_description.xml" value="0.25" />
+        <entry key="..\:/Users/Agnesh/Desktop/WORK/BFit_Admin/app/src/main/res/layout/fragment_description2.xml" value="0.25" />
         <entry key="..\:/Users/BCI LAB/StudioProjects/BFit_Admin/app/src/main/res/drawable/exercises.xml" value="0.2" />
         <entry key="..\:/Users/BCI LAB/StudioProjects/BFit_Admin/app/src/main/res/layout/activity_add_diet.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/BCI LAB/StudioProjects/BFit_Admin/app/src/main/res/layout/activity_add_exercise.xml" value="0.35260416666666666" />
@@ -22,11 +87,13 @@
         <entry key="..\:/Users/SHANEL FRANCIN/AndroidStudioProjects/BFitAdmin/app/src/main/res/layout/activity_register.xml" value="0.5" />
         <entry key="..\:/Users/SHANEL FRANCIN/AndroidStudioProjects/BFit_Admin/app/src/main/res/drawable/back.xml" value="0.1" />
         <entry key="..\:/Users/SHANEL FRANCIN/AndroidStudioProjects/BFit_Admin/app/src/main/res/layout/activity_add_diet.xml" value="0.25" />
+        <entry key="..\:/Users/SHANEL FRANCIN/AndroidStudioProjects/BFit_Admin/app/src/main/res/layout/activity_add_exercise.xml" value="0.1" />
+        <entry key="..\:/Users/SHANEL FRANCIN/AndroidStudioProjects/BFit_Admin/app/src/main/res/layout/activity_add_workout.xml" value="0.22" />
         <entry key="..\:/Users/SHANEL FRANCIN/AndroidStudioProjects/BFit_Admin/app/src/main/res/layout/activity_body_part.xml" value="0.3541666666666667" />
         <entry key="..\:/Users/SHANEL FRANCIN/AndroidStudioProjects/BFit_Admin/app/src/main/res/layout/activity_diet.xml" value="0.22" />
         <entry key="..\:/Users/SHANEL FRANCIN/AndroidStudioProjects/BFit_Admin/app/src/main/res/layout/activity_exercises.xml" value="0.3541666666666667" />
         <entry key="..\:/Users/SHANEL FRANCIN/AndroidStudioProjects/BFit_Admin/app/src/main/res/layout/activity_home.xml" value="0.18" />
-        <entry key="..\:/Users/SHANEL FRANCIN/AndroidStudioProjects/BFit_Admin/app/src/main/res/layout/activity_profile.xml" value="0.22" />
+        <entry key="..\:/Users/SHANEL FRANCIN/AndroidStudioProjects/BFit_Admin/app/src/main/res/layout/activity_profile.xml" value="0.1" />
         <entry key="..\:/Users/SHANEL FRANCIN/AndroidStudioProjects/BFit_Admin/app/src/main/res/layout/activity_register.xml" value="0.3541666666666667" />
         <entry key="..\:/Users/SHANEL FRANCIN/AndroidStudioProjects/BFit_Admin/app/src/main/res/layout/activity_workout.xml" value="0.3541666666666667" />
       </map>

@@ -172,30 +172,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registerbtn" />
 
-    <ImageView
-        android:id="@+id/iv_google"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/ripple_logo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_or"
-        app:srcCompat="@drawable/google_with_border"
-        tools:ignore="SpeakableTextPresentCheck"
-        android:clickable="true" />
-
-    <ImageView
-        android:id="@+id/iv_facebook"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="150dp"
-        android:background="@drawable/ripple_logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_or"
-        app:srcCompat="@drawable/facebook_with_border"
-        tools:ignore="SpeakableTextPresentCheck"
-        android:clickable="true" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

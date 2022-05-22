@@ -1,81 +1,102 @@
 package com.shcollege.bfitadmin;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
-public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
+import utilities.User;
 
+public class HomeActivity extends AppCompatActivity{
 
-    private TextView logoutbtn,diet_banner,add_diet;
-    private ImageView exercise_iv,profile_iv,diet_iv,workout_iv;
-
+    CardView workout,diet,profile,logout;
+    TextView username;
+    private FirebaseUser fUser;
+    private String profileID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        logoutbtn = (TextView) findViewById(R.id.logoutbtn);
-        logoutbtn.setOnClickListener(this);
-        diet_iv =(ImageView) findViewById(R.id.diet_iv);
-        //diet_banner =(TextView) findViewById(R.id.diet_banner);
-        workout_iv =(ImageView) findViewById(R.id.workout_iv);
-        profile_iv =(ImageView) findViewById(R.id.profile_iv);
-        profile_iv.setOnClickListener(new View.OnClickListener() {
+
+        workout = findViewById(R.id.home_workout);
+        diet = findViewById(R.id.home_diet);
+        profile = findViewById(R.id.home_profile);
+        logout = findViewById(R.id.home_logout);
+
+        username = findViewById(R.id.dashboard_uname);
+
+        fUser = FirebaseAuth.getInstance().getCurrentUser();
+        profileID = fUser.getUid();
+
+        workout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(HomeActivity.this, profile.class));
-            }
-        });
-        workout_iv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(HomeActivity.this, workout.class));
-            }
-        });
-        exercise_iv =(ImageView) findViewById(R.id.exercise_iv);
-        exercise_iv.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(HomeActivity.this, exercises.class));
-            }
-        });
-        diet_iv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(HomeActivity.this, diet.class));
+                startActivity(new Intent(HomeActivity.this, WorkoutHome.class));
             }
         });
 
+        diet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this, DietHome.class));
+            }
+        });
 
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this, ProfileActivity.class));
+            }
+        });
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                logout();
+            }
+        });
+
+        helloUser();
     }
 
-    @Override
-    public void onClick(View v){
-            switch (v.getId()) {
-                case R.id.logoutbtn:
-                    logout();
-                    break;
+    private void helloUser() {
+        FirebaseDatabase.getInstance().getReference().child("Admin Credentials").child(profileID).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                User user = dataSnapshot.getValue(User.class);
+                username.setText(user.getFirstname() + " " + user.getLastname());
+            }
 
-        }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
 
+            }
+        });
+    }
 
-}
     private void logout() {
             FirebaseAuth.getInstance().signOut();
-            startActivity(new Intent(HomeActivity.this, MainActivity.class));
+            SharedPreferences pref = getSharedPreferences("REMEMBER",MODE_PRIVATE);
+
+            pref.edit()
+                    .putString("USERNAME", null)
+                    .putString("PASSWORD", null)
+                    .commit();
+            startActivity(new Intent(HomeActivity.this, LoginActivity.class));
             finish();
-
     }
 
-
-
-    }
+}

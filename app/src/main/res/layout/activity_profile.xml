@@ -1,62 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".profile">
+    tools:context=".ProfileActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:id="@+id/bar"
-        android:background="#80000000">
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0">
 
-        <androidx.appcompat.widget.Toolbar
+        <TextView
+            android:id="@+id/profile_display_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/toolbar"
-            android:background="@android:color/transparent">
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:text="sample@gmail.com"
+            android:textColor="#000000"
+            android:textSize="16sp" />
 
-            <RelativeLayout
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout_name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_name_profile"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent"
+                android:fontFamily="@font/roboto_light"
+                android:hint="Name"
+                android:textColor="#FF0000"
+                android:textColorHint="#FF0000"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-                <ImageView
-                    android:id="@+id/close"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/back" />
+        <Button
+            android:id="@+id/btn_save_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="save changes"
+            android:visibility="invisible"
+            app:cornerRadius="16dp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Edit Profile"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="10dp"
-                    android:textSize="18sp"
-                    android:textColor="@color/white"
-                    android:layout_toEndOf="@id/close"/>
 
-                <TextView
-                    android:id="@+id/save"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginRight="10dp"
-                    android:text="SAVE"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
+    </LinearLayout>
 
-            </RelativeLayout>
+    <TextView
+        android:id="@+id/profile_name_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Welcome Bfituser1"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.115"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        </androidx.appcompat.widget.Toolbar>
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="131dp"
+        android:layout_height="103dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_name_display"
+        app:srcCompat="@drawable/user" />
 
-    </com.google.android.material.appbar.AppBarLayout>
+    <ImageView
+        android:id="@+id/image_edit_name"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_name_display"
+        app:layout_constraintStart_toEndOf="@+id/profile_name_display"
+        app:layout_constraintTop_toTopOf="@+id/profile_name_display"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/edit" />
 
-</LinearLayout>
+    <Button
+        android:id="@+id/reset_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="34dp"
+        android:text="Reset password"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

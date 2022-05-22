@@ -20,11 +20,12 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.SignInMethodQueryResult;
 import com.google.firebase.database.FirebaseDatabase;
 
+import utilities.User;
+
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
     private EditText fnameregister, lnameregister, emailregister, passwordregister;
     private TextView alreadylogin, registerbtn;
-    private ImageView googleIcon, facebookIcon;
     private FirebaseAuth mAuth;
 
     @Override
@@ -42,8 +43,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         alreadylogin = (TextView) findViewById(R.id.alreadylogin);
         alreadylogin.setOnClickListener(this);
         registerbtn = (TextView) findViewById(R.id.registerbtn);
-        googleIcon = (ImageView) findViewById(R.id.imageView_google);
-        facebookIcon = (ImageView) findViewById(R.id.imageView_facebook);
         registerbtn.setOnClickListener(this);
     }
     @Override
@@ -53,7 +52,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 sign_up();
                 break;
             case R.id.alreadylogin:
-                startActivity(new Intent(RegisterActivity.this, MainActivity.class));
+                startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
                 break;
         }
     }
@@ -117,10 +116,10 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
-                    Admin admin = new Admin(firstname, lastname, email, password);
-                    FirebaseDatabase.getInstance().getReference("Admin")
+                    User obj = new User(firstname, lastname, email, password);
+                    FirebaseDatabase.getInstance().getReference("Admin Credentials")
                             .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                            .setValue(admin).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            .setValue(obj).addOnCompleteListener(new OnCompleteListener<Void>() {
 
 
                         @Override
@@ -129,7 +128,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                                 FirebaseUser Admin = FirebaseAuth.getInstance().getCurrentUser();
 
                                 if (Admin.isEmailVerified()) {
-                                    startActivity(new Intent(RegisterActivity.this, MainActivity.class));
+                                    startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
                                 }
                                 else {
                                     Admin.sendEmailVerification();

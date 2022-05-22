@@ -10,22 +10,32 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BFitAdmin">
         <activity
-            android:name=".profile"
+            android:name=".DeleteDiet"
             android:exported="false" />
         <activity
-            android:name=".body_part"
+            android:name=".DeleteWorkout"
             android:exported="false" />
         <activity
-            android:name=".workout"
+            android:name=".ResetPassword"
+            android:exported="false"
+            android:parentActivityName=".ResetPassword" />
+        <activity
+            android:name=".DietDetails"
             android:exported="false" />
         <activity
-            android:name=".add_exercise"
+            android:name=".WorkoutDetails"
             android:exported="false" />
         <activity
-            android:name=".exercises"
+            android:name=".AddWorkout"
             android:exported="false" />
         <activity
-            android:name=".diet"
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WorkoutHome"
+            android:exported="false" />
+        <activity
+            android:name=".DietHome"
             android:exported="false" />
         <activity
             android:name=".HomeActivity"
@@ -34,7 +44,7 @@
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".add_diet"
+            android:name=".AddDiet"
             android:exported="false" />
         <activity
             android:name=".SplashScreen"
@@ -47,7 +57,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:theme="@style/Theme.BFitAdmin" />
 
         <meta-data
